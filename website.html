@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mandelbrot Set Explorer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Mandelbrot Set Explorer</h1>
+    <p>Mandelbrot Set Explorer is a simple set editor for some infinite functions.</p>
+    <p>Some instructions:</p>
+    <ul id="john">
+        <li>Left Click to zoom in. Right click to zoom out.</li>
+        <li>You can change the functions and the color using the inputs.</li>
+        <li>You can also change the max iterations for more precision.</li>
+    </ul>
+    <canvas id="mandelbrotCanvas" width="800" height="800"></canvas>
+    <div>
+        <label for="functionSelect">Function:</label>
+        <select id="functionSelect">
+            <option value="zSquaredPlusC">Z = Z^2 + C</option>
+            <option value="zCubedPlusC">Z = Z^3 + C</option>
+            <option value="zToTheFourthPlusC">Z = Z^4 + C</option>
+        </select>
+    </div>
+    <div>
+        <label for="maxIterInput">Max Iterations:</label>
+        <input type="number" id="maxIterInput" value="1000">
+    </div>
+    <div>
+        <label for="hueOffsetInput">Hue Offset:</label>
+        <input type="number" id="hueOffsetInput" value="0">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
